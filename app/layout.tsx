@@ -28,7 +28,6 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} antialiased`}
-        style={{ fontFamily: "var(--font-primary)", fontWeight: 300 }}
       >
         {children}
       </body>
