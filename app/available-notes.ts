@@ -23,9 +23,9 @@ export const AVAILABLE_NOTES: UnopenedNote[] = [
   {
     id: "note-1",
     title: "Top Chef",
-    text: "You are absolutely goated at cooking! Thank you for feeding us so scrumptiously all of the time.",
+    text: "You are absolutely goated at cooking! Thank you for feeding us so scrumptiously all of the time. Throwback to last Christmas!",
     author: "ian",
-    imagePath: "secret-santa-2024.HEIC",
+    imagePath: "secret-santa-2024.jpg",
     color: NoteColor.Yellow,
   },
   // Add more notes here as needed

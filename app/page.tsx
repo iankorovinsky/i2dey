@@ -135,7 +135,7 @@ export default function I2deyPage() {
           >
             <div className="relative w-64 h-80 md:w-80 md:h-96 lg:w-96 lg:h-[28rem]">
               <Image
-                src="/i2dey/note-jar.png"
+                src="/note-jar.png"
                 alt="Glass mason jar"
                 fill
                 className="object-contain"
@@ -160,7 +160,7 @@ export default function I2deyPage() {
               >
                 <div className="relative w-full h-full">
                   <Image
-                    src="/i2dey/crumpled-ball.png"
+                    src="/crumpled-ball.png"
                     alt="Crumpled note"
                     fill
                     className="object-contain opacity-80 group-hover:opacity-100 transition-opacity"
@@ -179,34 +179,37 @@ export default function I2deyPage() {
           onClick={closeModal}
         >
           <div
-            className="bg-white rounded-xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-auto transform transition-all duration-300 animate-modalIn"
+            className="bg-white rounded-xl shadow-2xl max-w-fit w-auto max-h-[90vh] overflow-auto transform transition-all duration-300 animate-modalIn"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal content */}
             <div className="p-6">
-              {selectedNote.imagePath && (
-                <div className="relative w-full h-48 mb-4 rounded-md overflow-hidden bg-gray-100">
-                  <Image
-                    src={`/i2dey/${selectedNote.imagePath}`}
-                    alt="Note image"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              )}
-              {selectedNote.title && (
-                <h3 className="text-gray-900 text-left font-[var(--font-primary)] text-xl font-bold mb-2">
-                  {selectedNote.title}
-                </h3>
-              )}
-              <p className="text-gray-800 text-left font-[var(--font-secondary)] text-lg">
-                {selectedNote.text}
-              </p>
-              {selectedNote.author && (
-                <p className="text-gray-600 text-right font-[var(--font-secondary)] text-sm mt-3 italic">
-                  — {selectedNote.author}
+              <div className="max-w-2xl">
+                {selectedNote.imagePath && (
+                  <div className="relative w-auto mb-4 rounded-md overflow-hidden bg-gray-100">
+                    <Image
+                      src={`/${selectedNote.imagePath}`}
+                      alt="Note image"
+                      width={800}
+                      height={600}
+                      className="object-contain w-auto h-auto max-w-full"
+                    />
+                  </div>
+                )}
+                {selectedNote.title && (
+                  <h3 className="text-gray-900 text-left font-[var(--font-primary)] text-xl font-bold mb-2">
+                    {selectedNote.title}
+                  </h3>
+                )}
+                <p className="text-gray-800 text-left font-[var(--font-secondary)] text-lg">
+                  {selectedNote.text}
                 </p>
-              )}
+                {selectedNote.author && (
+                  <p className="text-gray-600 text-right font-[var(--font-secondary)] text-sm mt-3 italic">
+                    — {selectedNote.author}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
         </div>
