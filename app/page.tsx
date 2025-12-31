@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { NoteColor } from "./notes";
 import { AVAILABLE_NOTES, UnopenedNote } from "./available-notes";
 
 interface Note {
@@ -11,7 +10,6 @@ interface Note {
   text: string;
   author?: string;
   imagePath?: string;
-  color: NoteColor;
   openedAt: number;
 }
 
@@ -85,7 +83,6 @@ export default function I2deyPage() {
           text: nextNote.text,
           author: nextNote.author,
           imagePath: nextNote.imagePath,
-          color: nextNote.color,
           openedAt: Date.now(),
         };
         setCurrentRevealedNote(newNote);
