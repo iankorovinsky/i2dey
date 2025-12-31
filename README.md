@@ -1,6 +1,6 @@
 ## Usage
 
-this repository has three roles.
+this repository has three rules.
 
 1. don't look at the deployment.
 2. if your name is ishaan, look at the deployment.
